@@ -56,6 +56,7 @@ var SelectorWidget = (function () {
             optionElement.tabindex = 0;
             optionElement.appendChild(document.createTextNode(e.name));
             optionElement.addEventListener('click', (event) => {
+                MashupPlatform.wiring.pushEvent('entityOutput', null);
                 MashupPlatform.wiring.pushEvent('entityOutput', e);
             });
             container.insertBefore(optionElement, null);
